@@ -1,0 +1,34 @@
+#pragma once
+
+#define DIODE_DIRECTION COL2ROW
+#define MATRIX_ROWS  8
+#define MATRIX_COLS  6
+#define MATRIX_ROW_PINS         {  4,  5,  6,  7 }
+#define MATRIX_COL_PINS         { 29, 28, 27, 26, 22, 20 }
+
+#define DEBOUNCE 5
+
+#define SPLIT_HAND_PIN GP21
+#define	SPLIT_HAND_PIN_LOW_IS_LEFT
+#define USE_SERIAL
+#define SERIAL_PIO_USE_PIO0
+#define SERIAL_USART_TX_PIN   GP1
+#define USB_VBUS_PIN 19
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 1000U
+
+#ifdef RGB_MATRIX_ENABLE
+    #define RGB_MATRIX_LED_COUNT          54
+    #define DRIVER_LED_TOTAL              RGBLED_NUM
+    #define RGB_MATRIX_SPLIT              { 27, 27 }
+    #define WS2812_DI_PIN                 GP0
+    #define WS2812_PIO_USE_PIO1
+
+    #define SPLIT_TRANSPORT_MIRROR
+    #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+    #define RGB_MATRIX_SLEEP
+    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 64
+    #define SPLIT_LAYER_STATE_ENABLE
+#endif
