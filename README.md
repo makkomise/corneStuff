@@ -4,8 +4,7 @@
 ### Features: 
 Firmware[^1]:
 - [x] Custom keymap with 3 basic layers and bonus layer for gaming that toggles on or off
-- [x] Per layer RGB Colors
-- [ ] As optimized as i can make
+- [x] Optimize 
 
 
 Case:

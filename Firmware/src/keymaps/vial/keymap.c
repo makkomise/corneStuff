@@ -49,39 +49,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         //------------------------------|   |----------------------------------------|
   )
 };
-//per-layer RGB
-#ifdef RGB_MATRIX_ENABLE
-
-void keyboard_post_init_user(void) {
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
-}
-bool rgb_matrix_indicators_user(void) {
-    uint8_t highest_layer = get_highest_layer(layer_state);
-    if (highest_layer == 3) {                       //Layer3
-        uint8_t left_side_led_count = 27; 
-        for (uint8_t i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
-            if (i < left_side_led_count) {
-                rgb_matrix_set_color(i, 196,147,255); 
-            } else {
-                rgb_matrix_set_color(i, 0, 0, 0); 
-            }
-        }
-        return false;
-    }
-    switch (highest_layer) {
-        case 0:
-            rgb_matrix_set_color_all(255,0,180);    //Layer0
-            break;
-        case 1:
-            rgb_matrix_set_color_all(142,165,255);  //Layer1
-            break;
-        case 2:
-            rgb_matrix_set_color_all(0,255,188);    //Layer2
-            break;
-        default:
-            rgb_matrix_set_color_all(255,255,255);  //Fallback
-            break;
-    }
-    return false; 
-}
-#endif
