@@ -30,7 +30,7 @@
     #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
     #define RGB_MATRIX_KEYPRESSES
     #define RGB_MATRIX_SLEEP
-    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 64
+    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 128
     #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT
 
     #define ENABLE_RGB_MATRIX_ALPHAS_MODS         // Static dual hue, speed is hue for secondary hue
