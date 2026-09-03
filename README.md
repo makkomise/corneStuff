@@ -3,7 +3,7 @@
 
 ### Features: 
 Firmware[^1]:
-- [x] Custom keymap with 3 basic layers and bonus layer for gaming that toggles on or off
+- [x] Custom keymap with 3 basic layers (plus extra for FN buttons) that is easy as possible to remember 
 - [x] Optimize 
 
 
