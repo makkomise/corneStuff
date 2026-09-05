@@ -19,6 +19,21 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 1000U
 
+#ifdef OLED_ENABLE
+#   define OLED_DISPLAY_128X32
+#   define I2C_DRIVER I2CD1
+#   define I2C1_SDA_PIN GP2
+#   define I2C1_SCL_PIN GP3
+#   define OLED_BRIGHTNESS 180
+#   define OLED_TIMEOUT 60000
+#   define SPLIT_LAYER_STATE_ENABLE
+#   define SPLIT_LED_STATE_ENABLE
+#   define SPLIT_MODS_ENABLE
+#   define SPLIT_OLED_ENABLE
+#   define SPLIT_WPM_ENABLE
+#   define OLED_FONT_H "keymaps/vial/glcdfont.c"
+#endif
+
 #ifdef RGB_MATRIX_ENABLE
 #define RGB_MATRIX_LED_COUNT          54 // Number of LEDs
     #define DRIVER_LED_TOTAL              RGBLED_NUM
@@ -62,6 +77,7 @@
     #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL      // Single hue fractal filled keys pulsing horizontally out to edges
     #define ENABLE_RGB_MATRIX_PIXEL_FLOW          // Pulsing RGB flow along LED wiring with random hues
     #define ENABLE_RGB_MATRIX_PIXEL_RAIN          // Randomly light keys with random hues
+    #define ENABLE_RGB_MATRIX_TYPING_HEATMAP      // How hot is your WPM!
     #define ENABLE_RGB_MATRIX_DIGITAL_RAIN        // That famous computer simulation
     #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE   // Pulses keys hit to hue & value then fades value out
     #define ENABLE_RGB_MATRIX_SOLID_REACTIVE      // Static single hue, pulses keys hit to shifted hue then fades to current hue
