@@ -25,7 +25,7 @@
 #   define I2C1_SDA_PIN GP2
 #   define I2C1_SCL_PIN GP3
 #   define OLED_BRIGHTNESS 180
-#   define OLED_TIMEOUT 60000
+#   define OLED_TIMEOUT 0
 #   define SPLIT_LAYER_STATE_ENABLE
 #   define SPLIT_LED_STATE_ENABLE
 #   define SPLIT_MODS_ENABLE
